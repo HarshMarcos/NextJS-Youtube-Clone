@@ -17,6 +17,7 @@ const MenuItems: React.FC<MenuItemProps> = ({
   return (
     <div
       className={`flex items-center hover:bg-neutral-700 p-3 cursor-pointer &{round && "rounded-lg"}`}
+      onClick={onClick}
     >
       {logo}
       {label}

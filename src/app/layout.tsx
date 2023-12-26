@@ -6,6 +6,8 @@ import CurrentUserProvider, {
   CurrentUserContext,
 } from "@/context/CurrentUserContext";
 import getCurrenUser from "@/actions/getCurrentUser";
+import CreateChannelModalProvider from "@/context/CreateChannelModal";
+import CreateChannelModal from "@/components/shared/Modal/CreateChannelModal";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,10 +28,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <CurrentUserProvider user={currentUser}>
-          <Navigation />
-          <div className="pt-16">{children}</div>
-        </CurrentUserProvider>
+        <CreateChannelModalProvider>
+          <CreateChannelModal />
+          <CurrentUserProvider user={currentUser}>
+            <Navigation />
+            <div className="pt-16">{children}</div>
+          </CurrentUserProvider>
+        </CreateChannelModalProvider>
       </body>
     </html>
   );
