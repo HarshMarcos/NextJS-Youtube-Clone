@@ -11,8 +11,10 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { v4 as uuid } from "uuid";
 import { toast } from "react-hot-toast";
 import axios from "axios";
+import { useProtectedRoute } from "@/hooks/useProtectedRoute";
 
 export default function UploadPage() {
+  useProtectedRoute();
   const uploadVideoModal = useContext(UploadVideoModalContext);
 
   useEffect(() => uploadVideoModal?.onOpen(), []);
