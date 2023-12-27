@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 type ModalState = {
   isOpen: boolean;
@@ -13,7 +13,8 @@ export const CreateChannelModalContext = createContext<ModalState | null>(null);
 const CreateChannelModalProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <CreateChannelModalContext.Provider
       value={{
