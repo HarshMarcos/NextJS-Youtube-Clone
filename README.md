@@ -1,3 +1,5 @@
+![ys1](https://github.com/HarshMarcos/NextJS-Youtube-Clone/assets/98093623/60bcd828-83a2-4d51-8ec0-fe3b43521cb7)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
